@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Stars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    document.addEventListener("scroll", function() {
+        let header = document.querySelector("header");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+    let sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", function() {
+        sections.forEach(sec => {
+            let position = sec.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+            if (position < windowHeight - 100) {
+                sec.classList.add("visible");
+            }
+        });
+    });
+</script>
+<script src="script.js"></script>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <header>
+        <h1>Beauty Stars</h1>
+        <p>Los mejores productos de belleza en un solo lugar de tus marcas favoritas nosotros lo conseguimos.Apertura proximamente</p>
+        <p>Desde la ciudad de El Paraiso con envio nacional hecha un vistaso a tus marcas favoritas que podras encontrar</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#flower-knows">Flower Knows</a></li>
+            <li><a href="#beauty-creations">Beauty Creations</a></li>
+            <li><a href="#milk">Milk</a></li>
+            <li><a href="#italia-deluxe">Italia Deluxe</a></li>
+            <li><a href="#bioaqua">Bioaqua</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="flower-knows">
+            <h2>Flower Knows</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="Flower knows.jpg" alt="Producto 1">
+                    <p>Lápiz labial brillante de la colección Butterfly Cloud Collar</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="Flower Knows1.jpg" alt="Producto 2">
+                    <p>Sombras Encantadas</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="Flower knows 2.jpg" alt="Producto 2">
+                    <p>Set de regalo todo incluido Strawberry Cupid</p>
+                </div>    <div class="carousel-item">
+                    <img src="Flower Knows 3.jpg" alt="Producto 2">
+                    <p>Conjunto Pop Rosa</p>
+               
+            </div>
+        </section>
+        
+        <section id="beauty-creations">
+            <h2>Beauty Creations</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="Beauty Creations1.jpg" alt="Producto 1">
+                    <p>Paquete de tocador Betty Boop</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="Beauty Creations2.png" alt="Producto 2">
+                    <p>Colección de 7 piezas La novia cadáver de Tim Burton x Beauty Creations</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="Shadow-Palette-Girls-Nite-Out-Collection-Bratz.jpg" alt="Producto 1">
+                    <p>Paleta de sombras Girls Nite Out de Bratz X Beauty Creations</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="shadow-and-face-palette-palette-beauty-creations-yme16-539391.jpg" alt="Producto 2">
+                    <p>Paleta de sombras y rostro YeriMua</p>
+
+            </div>
+        </section>
+        
+        <section id="milk">
+            <h2>Milk</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="Milk.jpg" alt="Producto 1">
+                    <p>Primer</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="Milk 2.jpg" alt="Producto 2">
+                    <p>Jelli blush</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="lip.jpg" alt="Producto 1">
+                    <p>lip bal</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="milk-botm_0002_MilkMakeup_BOTM_Generic_HighRes_1646231331.jpg" alt="Producto 2">
+                    <p>Skincare combo</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="5milk rimer.jpg" alt="Producto 2">
+                    <p>Rimel</p>
+                </div>
+            </div>
+        </section>
+        
+            <section id="italia-deluxe">
+            <h2>Italia Deluxe</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="1itblush phat.jpg" alt="Blush Phat">
+                    <p>Blush Phat</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="2it polvo compacto.jpg" alt="Polvo compacto">
+                    <p>Polvo compacto</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="3it brillo para cabello.jpg" alt="Brillo para cabello">
+                    <p>Brillo para cabello</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="4it lip oil.jpg" alt="Lip Oil">
+                    <p>Lip Oil</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="5it exfoliante labios.jpg" alt="Exfoliante de labios">
+                    <p>Exfoliante de labios</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="bioaqua">
+            <h2>Bioaqua</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="1B set arroz.png" alt="Set de arroz">
+                    <p>Set de arroz</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="2B set de rosas.jpg" alt="Set de rosas">
+                    <p>Set de rosas</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="3B Set de naranja.jpg" alt="Set de naranja">
+                    <p>Set de naranja</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="4B set de centella.png" alt="Set de centella">
+                    <p>Set de centella</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="5B set aguacate.png" alt="Set de aguacate">
+                    <p>Set de aguacate</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>imagenes usadas con fines ilustrativos proximamente tus productos favoritos</p>
+        <p>Contacto: beautystars cel: 9731-8526</p>
+        <p>Creado por: Lizzy Caceres</p>
+    </footer>
+</body>
+</html>
